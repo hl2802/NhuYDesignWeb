@@ -2,19 +2,7 @@
 {% load static %}
 
 {% block content %}
-  <div id="colorlib-page">
-    <header>
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="colorlib-navbar-brand">
-              <a class="colorlib-logo" href="{% url 'home:home' %}"><span>Nhu Y</span><span>Design</span></a>
-            </div>
-            <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
-          </div>
-        </div>
-      </div>
-    </header>
+
     <div id="colorlib-work">
       <div class="container">
         <div class="row text-center">
@@ -36,7 +24,7 @@
         <div class="row">
           <div class="col-md-12">
             <div class="work-entry animate-box">
-              <a href="Portfolio-single.html" class="work-img" style="background-image:url('{% static 'home/images/work-8.jpg' %}');">
+              <a href="{% url 'portfolio:single_portfolio' %}" class="work-img" style="background-image:url('{% static 'home/images/work-8.jpg' %}');">
                 <div class="display-t">
                   <div class="work-name">
                     <h2>Pursuing Best</h2>
@@ -54,7 +42,7 @@
           </div>
           <div class="col-md-12">
             <div class="work-entry animate-box">
-              <a href="Portfolio-single.html" class="work-img" style="background-image:url('{% static 'home/images/work-9.jpg' %}');">
+              <a href="{% url 'portfolio:single_portfolio' %}" class="work-img" style="background-image:url('{% static 'home/images/work-9.jpg' %}');">
                 <div class="display-t">
                   <div class="work-name">
                     <h2>Coordinates</h2>
@@ -72,7 +60,7 @@
           </div>
           <div class="col-md-12">
             <div class="work-entry animate-box">
-              <a href="Portfolio-single.html" class="work-img" style="background-image:url('{% static 'home/images/work-10.jpg' %}');">
+              <a href="{% url 'portfolio:single_portfolio' %}" class="work-img" style="background-image:url('{% static 'home/images/work-10.jpg' %}');">
                 <div class="display-t">
                   <div class="work-name">
                     <h2>Cristall</h2>
@@ -90,7 +78,7 @@
           </div>
           <div class="col-md-12">
             <div class="work-entry animate-box">
-              <a href="Portfolio-single.html" class="work-img" style="background-image:url('{% static 'home/images/work-11.jpg' %}');">
+              <a href="{% url 'portfolio:single_portfolio' %}" class="work-img" style="background-image:url('{% static 'home/images/work-11.jpg' %}');">
                 <div class="display-t">
                   <div class="work-name">
                     <h2>Black</h2>
@@ -108,7 +96,7 @@
           </div>
           <div class="col-md-12">
             <div class="work-entry animate-box">
-              <a href="Portfolio-single.html" class="work-img" style="background-image:url('{% static 'home/images/work-13.jpg' %}');">
+              <a href="{% url 'portfolio:single_portfolio' %}" class="work-img" style="background-image:url('{% static 'home/images/work-13.jpg' %}');">
                 <div class="display-t">
                   <div class="work-name">
                     <h2>Black</h2>
@@ -126,7 +114,7 @@
           </div>
           <div class="col-md-12">
             <div class="work-entry animate-box">
-              <a href="Portfolio-single.html" class="work-img" style="background-image:url('{% static 'home/images/work-14.jpg' %}');">
+              <a href="{% url 'portfolio:single_portfolio' %}" class="work-img" style="background-image:url('{% static 'home/images/work-14.jpg' %}');">
                 <div class="display-t">
                   <div class="work-name">
                     <h2>Black</h2>
@@ -144,7 +132,7 @@
           </div>
           <div class="col-md-12">
             <div class="work-entry animate-box">
-              <a href="Portfolio-single.html" class="work-img" style="background-image:url('{% static 'home/images/work-15.jpg' %}');">
+              <a href="{% url 'portfolio:single_portfolio' %}" class="work-img" style="background-image:url('{% static 'home/images/work-15.jpg' %}');">
                 <div class="display-t">
                   <div class="work-name">
                     <h2>Indice</h2>
@@ -164,64 +152,5 @@
       </div>
     </div>
 
-    <footer>
-      <div id="footer">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-4 col-pb-sm">
-              <div class="row">
-                <div class="col-md-10">
-                  <h2>Let's Talk</h2>
-                  <p>Let's discuss the interior together</p>
-                  <p>
-                    <a href="#">Nhu Y@info.com</a>
-                  </p>
-                  <p class="colorlib-social-icons">
-                    <a href="#"><i class="icon-facebook4"></i></a>
-                    <a href="#"><i class="icon-twitter3"></i></a>
-                    <a href="#"><i class="icon-googleplus"></i></a>
-                    <a href="#"><i class="icon-dribbble2"></i></a>
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4 col-pb-sm">
-              <h2>Latest Blog</h2>
-              <div class="f-entry">
-                <a href="#" class="featured-img" style="background-image:url('{% static 'home/images/img-12.jpg' %}');"></a>
-                <div class="desc">
-                  <span>February 9, 2018</span>
-                  <h3><a href="#">The awesomeness of the interior</a></h3>
-                </div>
-              </div>
-              <div class="f-entry">
-                <a href="#" class="featured-img" style="background-image:url('{% static 'home/images/img-10.jpg' %}');"></a>
-                <div class="desc">
-                  <span>February 9, 2018</span>
-                  <h3><a href="#">Nhu Y Design</a></h3>
-                </div>
-              </div>
-              <div class="f-entry">
-                <a href="#" class="featured-img" style="background-image:url('{% static 'home/images/img-11.jpg' %}');"></a>
-                <div class="desc">
-                  <span>February 9, 2018</span>
-                  <h3><a href="#">Road Trip</a></h3>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4 col-pb-sm">
-              <h2>Newsletter</h2>
-              <p>With such great advantages, it is no surprise that interior architecture is considered an extremely important and indispensable art in modern life.</p>
-              <div class="subscribe text-center">
-                <div class="form-group">
-                  <input type="text" class="form-control text-center" placeholder="Enter Email address" />
-                  <input type="submit" value="Subscribe" class="btn btn-primary btn-custom" />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
-  </div>
+
 {% endblock %}

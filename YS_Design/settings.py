@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'blog',
     'contact',
     'portfolio',
+    'services',
 ]
 
 MIDDLEWARE = [
@@ -80,8 +81,12 @@ WSGI_APPLICATION = 'YS_Design.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'ys_design',
+        'USER': 'root',
+        'PASSWORD': '.gptwmdaj',
+        'HOST': 'localhost',
+        'PORT': '3306',
     }
 }
 
