@@ -23,8 +23,9 @@
             </div>
             <div class="row">
                 <div class="col-md-4">
+                    {% for item in pF %}
                     <div class="article animate-box">
-                        <a href="{% url 'blog:single-blog' %}" class="blog-img">
+                        <a href="{% url 'blog:single_blog' item.id %}" class="blog-img">
                             <img class="img-responsive" src="{% static 'home/images/img-12.jpg' %}" alt="html5 bootstrap by colorlib.com">
                             <div class="overlay"></div>
                             <div class="link">
@@ -32,138 +33,18 @@
                             </div>
                         </a>
                         <div class="desc">
-                            <span class="meta">9, Dec 2023</span>
-                            <h2><a href="{% url 'blog:single-blog' %}">Nhu Y Design</a></h2>
-                            <p>Interior architecture is a wonderful art, expressing human sophistication and creativity. It is not merely the arrangement of furniture in the living space but also the way to express style and personalize the room. The harmonious combination of colors, light, materials and space creates a beautiful and comfortable living environment.</p>
+                            <span class="meta">{{pF.created_at}}</span>
+                            <h2><a href="{% url 'blog:single_blog' item.id%}">{{pF.author}} Design</a></h2>
+                            <p>{{pF.body}}</p>
                         </div>
                     </div>
+                    {% endfor %}
 
-                    <div class="article animate-box">
-                        <a href="{% url 'blog:single-blog' %}" class="blog-img">
-                            <img class="img-responsive" src="{% static 'home/images/img-13.jpg' %}" alt="html5 bootstrap by colorlib.com">
-                            <div class="overlay"></div>
-                            <div class="link">
-                                <span class="read">Read more</h2>
-                            </div>
-                        </a>
-                        <div class="desc">
-                            <span class="meta">9, Dec 2023</span>
-                            <h2><a href="{% url 'blog:single-blog' %}">Nhu Y Design</a></h2>
-                            <p>Interior architecture is a wonderful art, expressing human sophistication and creativity. It is not merely the arrangement of furniture in the living space but also the way to express style and personalize the room. The harmonious combination of colors, light, materials and space creates a beautiful and comfortable living environment.</p>
-                        </div>
-                    </div>
 
-                    <div class="article animate-box">
-                        <a href="{% url 'blog:single-blog' %}" class="blog-img">
-                            <img class="img-responsive" src="{% static 'home/images/img-14.jpg' %}" alt="html5 bootstrap by colorlib.com">
-                            <div class="overlay"></div>
-                            <div class="link">
-                                <span class="read">Read more</h2>
-                            </div>
-                        </a>
-                        <div class="desc">
-                            <span class="meta">9, Dec 2023</span>
-                            <h2><a href="{% url 'blog:single-blog' %}">Nhu Y Design</a></h2>
-                            <p>Interior architecture is a wonderful art, expressing human sophistication and creativity. It is not merely the arrangement of furniture in the living space but also the way to express style and personalize the room. The harmonious combination of colors, light, materials and space creates a beautiful and comfortable living environment.</p>
-                        </div>
-                    </div>
                 </div>
 
 
-                <div class="col-md-4">
-                    <div class="article animate-box">
-                        <a href="{% url 'blog:single-blog' %}" class="blog-img">
-                            <img class="img-responsive" src="{% static 'home/images/img-10.jpg' %}" alt="html5 bootstrap by colorlib.com">
-                            <div class="overlay"></div>
-                            <div class="link">
-                                <span class="read">Read more</h2>
-                            </div>
-                        </a>
-                        <div class="desc">
-                            <span class="meta">9, Dec 2023</span>
-                            <h2><a href="{% url 'blog:single-blog' %}">Nhu Y Design</a></h2>
-                            <p>Interior architecture is a wonderful art, expressing human sophistication and creativity. It is not merely the arrangement of furniture in the living space but also the way to express style and personalize the room. The harmonious combination of colors, light, materials and space creates a beautiful and comfortable living environment.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="article animate-box">
-                        <a href="{% url 'blog:single-blog' %}" class="blog-img">
-                            <img class="img-responsive" src="{% static 'home/images/img-15.jpg' %}" alt="html5 bootstrap by colorlib.com">
-                            <div class="overlay"></div>
-                            <div class="link">
-                                <span class="read">Read more</h2>
-                            </div>
-                        </a>
-                        <div class="desc">
-                            <span class="meta">9, Dec 2023</span>
-                            <h2><a href="{% url 'blog:single-blog' %}">Nhu Y Design</a></h2>
-                            <p>Interior architecture is a wonderful art, expressing human sophistication and creativity. It is not merely the arrangement of furniture in the living space but also the way to express style and personalize the room. The harmonious combination of colors, light, materials and space creates a beautiful and comfortable living environment.</p>
-                        </div>
-                    </div>
 
-                    <div class="article animate-box">
-                        <a href="{% url 'blog:single-blog' %}" class="blog-img">
-                            <img class="img-responsive" src="{% static 'home/images/img-16.jpg' %}" alt="html5 bootstrap by colorlib.com">
-                            <div class="overlay"></div>
-                            <div class="link">
-                                <span class="read">Read more</h2>
-                            </div>
-                        </a>
-                        <div class="desc">
-                            <span class="meta">9, Dec 2023</span>
-                            <h2><a href="{% url 'blog:single-blog' %}">Nhu Y Design</a></h2>
-                            <p>Interior architecture is a wonderful art, expressing human sophistication and creativity. It is not merely the arrangement of furniture in the living space but also the way to express style and personalize the room. The harmonious combination of colors, light, materials and space creates a beautiful and comfortable living environment.</p>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="col-md-4">
-                    <div class="article animate-box">
-                        <a href="{% url 'blog:single-blog' %}" class="blog-img">
-                            <img class="img-responsive" src="{% static 'home/images/img-11.jpg' %}" alt="html5 bootstrap by colorlib.com">
-                            <div class="overlay"></div>
-                            <div class="link">
-                                <span class="read">Read more</h2>
-                            </div>
-                        </a>
-                        <div class="desc">
-                            <span class="meta">9, Dec 2023</span>
-                            <h2><a href="{% url 'blog:single-blog' %}">Nhu Y Design</a></h2>
-                            <p>Interior architecture is a wonderful art, expressing human sophistication and creativity. It is not merely the arrangement of furniture in the living space but also the way to express style and personalize the room. The harmonious combination of colors, light, materials and space creates a beautiful and comfortable living environment.</p>
-                        </div>
-                    </div>
-
-                    <div class="article animate-box">
-                        <a href="{% url 'blog:single-blog' %}" class="blog-img">
-                            <img class="img-responsive" src="{% static 'home/images/img-17.jpg' %}" alt="html5 bootstrap by colorlib.com">
-                            <div class="overlay"></div>
-                            <div class="link">
-                                <span class="read">Read more</h2>
-                            </div>
-                        </a>
-                        <div class="desc">
-                            <span class="meta">9, Dec 2023</span>
-                            <h2><a href="{% url 'blog:single-blog' %}">Nhu Y Design</a></h2>
-                            <p>Interior architecture is a wonderful art, expressing human sophistication and creativity. It is not merely the arrangement of furniture in the living space but also the way to express style and personalize the room. The harmonious combination of colors, light, materials and space creates a beautiful and comfortable living environment.</p>
-                        </div>
-                    </div>
-
-                    <div class="article animate-box">
-                        <a href="{% url 'blog:single-blog' %}" class="blog-img">
-                            <img class="img-responsive" src="{% static 'home/images/img-12.jpg' %}" alt="html5 bootstrap by colorlib.com">
-                            <div class="overlay"></div>
-                            <div class="link">
-                                <span class="read">Read more</h2>
-                            </div>
-                        </a>
-                        <div class="desc">
-                            <span class="meta">9, Dec 2023</span>
-                            <h2><a href="{% url 'blog:single-blog' %}">Nhu Y Design</a></h2>
-                            <p>Interior architecture is a wonderful art, expressing human sophistication and creativity. It is not merely the arrangement of furniture in the living space but also the way to express style and personalize the room. The harmonious combination of colors, light, materials and space creates a beautiful and comfortable living environment.</p>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </div>

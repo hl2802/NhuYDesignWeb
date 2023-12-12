@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'contact',
     'portfolio',
     'services',
+    
 ]
 
 MIDDLEWARE = [

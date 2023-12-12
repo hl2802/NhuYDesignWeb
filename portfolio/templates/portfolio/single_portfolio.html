@@ -27,11 +27,8 @@
               <a href="{% url 'portfolio:portfolio' %}" class="work-img" style="background-image:url('{% static 'home/images/work-8.jpg' %}');"></a>
               <div class="col-md-8 col-md-offset-2">
                 <div class="desc">
-                  <h2>Pursuing Best</h2>
-                  <p>Interior architecture is a wonderful art, expressing human sophistication and creativity. It is not merely the arrangement of furniture in the living space but also the way to express style and personalize the room. The harmonious combination of colors, light, materials and space creates a beautiful and comfortable living environment.</p> <p>Interior architecture is also a place to express the creativity and personal style of the designer. From decorative lights to wall paintings, all are carefully selected to create a unique and impressive living space. This helps to create a unique and impressive living space, reflecting the style and preferences of the owner of the room</p>
-                  <img class="img-responsive" src="{% static 'home/images/work-9.jpg' %}" alt="html5 bootstrap template by colorlib.com" /><br />
-                  <p>In addition, interior architecture has a positive effect on people's mood and spirit. A well-designed living space not only brings comfort, but also helps create a positive living environment, encourages creativity and enhances the quality of life..</p>
-                  <p class="read">
+                  <h2>{{pD.title}}</h2>
+                  <p>{{pD.body}}</p>
                     <a href="#">Live Preview</a>
                   </p>
                 </div>
