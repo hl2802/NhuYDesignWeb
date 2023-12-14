@@ -1,3 +1,11 @@
 from django.db import models
-
-# Create your models here.
+from django.core.validators import FileExtensionValidator
+class postImg(models.Model):
+    # Use FileField with FileExtensionValidator
+    image = models.FileField(
+        upload_to='media/',
+        blank=True,
+        null=True,
+        default='no-image.png',
+        validators=[FileExtensionValidator(allowed_extensions=['jpg', 'jpeg', 'png', 'gif', 'bmp', 'tiff'])]
+    )

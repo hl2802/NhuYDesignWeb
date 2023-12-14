@@ -14,7 +14,7 @@ def getContact(request):
         form = contact_Form(request.POST)
         if form.is_valid():
             form.save()
-            return HttpResponse("success")  # Use reverse URL for cleaner code
+            return render(request, 'home/index.html')
         else:
             context = {'form': form}
             return render(request, 'contact/index.html', context)

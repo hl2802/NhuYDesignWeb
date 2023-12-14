@@ -24,13 +24,16 @@
         <div class="row">
           <div class="col-md-12">
             <div class="work-entry animate-box">
-              <a href="{% url 'portfolio:portfolio' %}" class="work-img" style="background-image:url('{% static 'home/images/work-8.jpg' %}');"></a>
+              <a href="#" class="work-img" style="background-image:url({{pD.image.url}});"></a>
               <div class="col-md-8 col-md-offset-2">
                 <div class="desc">
                   <h2>{{pD.title}}</h2>
-                  <p>{{pD.body}}</p>
+                  {{ pD.body | safe }}
+
+
+                  
                     <a href="#">Live Preview</a>
-                  </p>
+                 
                 </div>
               </div>
             </div>

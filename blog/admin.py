@@ -1,4 +1,5 @@
 from django.contrib import admin
 from.models import postForm
-# Register your models here.
+from .models import commentForm
+admin.site.register(commentForm)
 admin.site.register(postForm)

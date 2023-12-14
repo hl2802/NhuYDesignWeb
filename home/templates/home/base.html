@@ -94,7 +94,7 @@
 					<div class="row">
 						<div class="col-md-12">
 							<div class="colorlib-navbar-brand">
-								<a class="colorlib-logo" href="{% url 'home:home' %}"><span>Nhu Y</span><span>Design</span></a>
+								<a class="colorlib-logo" href="{% url 'home:home' %}"><span>Nhu Y</span><span> Artistic</span></a>
 							</div>
 							<a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
 						</div>
@@ -117,15 +117,17 @@
 										<img class="img-responsive" src="{% static 'home/images/about-3.jpg' %}"
 											alt="html5 bootstrap template by colorlib">
 									</a>
-									<span class="author-name"> Zaha Hadid</span>
+									<span class="author-name"> Nhu Y  Artistic</span>
 									<p>
 										"Architecture is not only the organization of space, but also the organization of emotions." 
 									</p>
 									<p class="colorlib-social-icons">
-										<a href="#"><i class="icon-facebook4"></i></a>
-										<a href="#"><i class="icon-twitter3"></i></a>
-										<a href="#"><i class="icon-googleplus"></i></a>
-										<a href="#"><i class="icon-dribbble2"></i></a>
+										<a href="https://www.facebook.com/NhuY.Artistic?mibextid=ZbWKwL"><i class="icon-facebook2"></i></a>
+										<a href="https://youtube.com/@nhu.y.artistic?si=gGyDwOOERftzcn6Z"><i class="icon-youtube"></i></a>
+										<a href="https://instagram.com/nhu.y.artistic?igshid=NzZlODBkYWE4Ng%3D%3D&utm_source=qr"><i class="icon-instagram2"></i></a>
+										<a href="https://www.tiktok.com/@nhu.y.artistic?_t=8i1xFhD6lus&_r=1"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-tiktok" viewBox="0 0 16 16">
+											<path d="M9 0h1.98c.144.715.54 1.617 1.235 2.512C12.895 3.389 13.797 4 15 4v2c-1.753 0-3.07-.814-4-1.829V11a5 5 0 1 1-5-5v2a3 3 0 1 0 3 3z"/>
+										  </svg></a>
 									</p>
 								</div>
 							</div>
@@ -157,12 +159,16 @@
 						  <div class="col-md-4 col-pb-sm">
 							<h2>Newsletter</h2>
 							<p>With such great advantages, it is no surprise that interior architecture is considered an extremely important and indispensable art in modern life.</p>
-							<div class="subscribe text-center">
-							  <div class="form-group">
-								<input type="text" class="form-control text-center" placeholder="Enter Email address" />
-								<input type="submit" value="Subscribe" class="btn btn-primary btn-custom" />
-							  </div>
-							</div>
+							<form action="{% url 'contact:saveContact' %}" method="post">
+								{% csrf_token %}
+								<div class="subscribe text-center">
+									<div class="form-group">
+									  <input type="text" class="form-control text-center" placeholder="Enter Email address" />
+									  <input type="submit" value="Subscribe" class="btn btn-primary btn-custom" />
+									</div>
+								  </div>
+							</form>
+							
 						  </div>
 					</div>
 	
