@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from .models import postImg 
+from services.models import postImg as imgCT
 from blog.models import postForm as bl
 from portfolio.models import postForm as sp
 from contact.models import contactForm 
@@ -10,9 +11,10 @@ from .models import subForm
 def index(request):
     form = contact_Form()
     avt=postImg.objects.all()
+    iC=imgCT.objects.all()
     pF = bl.objects.all()
     pFF = sp.objects.all()
-    return render(request,'home/index.html',{'avt':avt,'pF':pF,'pFF':pFF,'form':form})
+    return render(request,'home/index.html',{'avt':avt,'pF':pF,'pFF':pFF,'form':form,'iC':iC})
 
 
 def single_blog(request, id):
