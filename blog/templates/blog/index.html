@@ -35,7 +35,9 @@
                         </a>
                         <div class="desc">
                             <span class="meta">{{item.created_at}}</span>
-                            <h2><a href="{% url 'blog:single_blog' item.id%}">{{item.author}}  Artistic</a></h2>
+                            <h2><a href="{% url 'blog:single_blog' item.id%}">{{item.title}}</a></h2>
+
+                            <h5><a href="{% url 'blog:single_blog' item.id%}">{{item.author}}  Artistic</a></h2>
                             <p>{{item.summary}}</p>
                         </div>
                     </div>

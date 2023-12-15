@@ -12,8 +12,8 @@ def index(request):
     form = contact_Form()
     avt=postImg.objects.all()
     iC=imgCT.objects.all()
-    pF = bl.objects.all()
-    pFF = sp.objects.all()
+    pF = bl.objects.order_by('-created_at')[:4]
+    pFF = sp.objects.order_by('-created_at')[:4]
     return render(request,'home/index.html',{'avt':avt,'pF':pF,'pFF':pFF,'form':form,'iC':iC})
 
 
