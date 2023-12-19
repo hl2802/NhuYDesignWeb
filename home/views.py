@@ -6,15 +6,18 @@ from blog.models import postForm as bl
 from portfolio.models import postForm as sp
 from contact.models import contactForm 
 from contact.forms import contact_Form 
+from about.models import postAbout
 from .models import subForm
 # Create your views here.
 def index(request):
+    pA=postAbout.objects.all()
+    sF = subForm.objects.all()
     form = contact_Form()
     avt=postImg.objects.all()
     iC=imgCT.objects.all()
     pF = bl.objects.order_by('-created_at')[:4]
     pFF = sp.objects.order_by('-created_at')[:4]
-    return render(request,'home/index.html',{'avt':avt,'pF':pF,'pFF':pFF,'form':form,'iC':iC})
+    return render(request,'home/index.html',{'avt':avt,'pF':pF,'pFF':pFF,'form':form,'iC':iC,'sF':sF,'pA':pA})
 
 
 def single_blog(request, id):

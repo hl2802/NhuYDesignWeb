@@ -94,7 +94,7 @@
 					<div class="row">
 						<div class="col-md-12">
 							<div class="colorlib-navbar-brand">
-								<a class="colorlib-logo" href="{% url 'home:home' %}"><span>Nhu Y</span><span> Artistic</span></a>
+								<a  href="{% url 'home:home' %}"><img src="{% static 'home/images/Screenshot_2023-12-17_210925-removebg-preview.png' %}" alt="" style="width: 70px; height: 70px"></a>
 							</div>
 							<a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
 						</div>
@@ -134,27 +134,16 @@
 						</div>
 						<div class="col-md-4 col-pb-sm">
 							<h2>Latest Blog</h2>
+							{% for item in pF %}
 							<div class="f-entry">
-							  <a href="#" class="featured-img" style="background-image:url('{% static 'home/images/img-12.jpg' %}');"></a>
-							  <div class="desc">
-								<span>February 9, 2018</span>
-								<h3><a href="#">The awesomeness of the interior</a></h3>
+								<a href="#" class="featured-img" style="background-image:url('{% static 'home/images/img-12.jpg' %}');"></a>
+								<div class="desc">
+								  <span>{{item.created_at}}</span>
+								  <h3><a href="#">{{item.title}}</a></h3>
+								</div>
 							  </div>
-							</div>
-							<div class="f-entry">
-							  <a href="#" class="featured-img" style="background-image:url('{% static 'home/images/img-10.jpg' %}');"></a>
-							  <div class="desc">
-								<span>February 9, 2018</span>
-								<h3><a href="#">Nhu Y Artistic</a></h3>
-							  </div>
-							</div>
-							<div class="f-entry">
-							  <a href="#" class="featured-img" style="background-image:url('{% static 'home/images/img-11.jpg' %}');"></a>
-							  <div class="desc">
-								<span>February 9, 2018</span>
-								<h3><a href="#">Road Trip</a></h3>
-							  </div>
-							</div>
+							{% endfor %}
+
 						  </div>
 						  <div class="col-md-4 col-pb-sm">
 							<h2>Newsletter</h2>

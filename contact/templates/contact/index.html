@@ -3,19 +3,7 @@
 {% load static %}
 
 {% block content %}
-<div id="colorlib-page">
-  <header>
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="colorlib-navbar-brand">
-            <a class="colorlib-logo" href="{% url 'home:home' %}"><span>Nhu Y</span><span>Design</span></a>
-          </div>
-          <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
-        </div>
-      </div>
-    </div>
-  </header>
+
 
   <div id="colorlib-contact">
     <div class="container">
@@ -57,11 +45,11 @@
             </div>
             <form action="{% url 'contact:saveContact' %}" method="post">
               {% csrf_token %}
-              <div class="col-md-7 col-md-push-1 animate-box">
-                  <div class="row">
+              <div class="col-md-7 col-md-push-1 animate-box" >
+                  <div class="row" >
                       <div class="col-md-12">
                           <div class="form-group">
-                              <textarea name="body" class="form-control" id="body" cols="30" rows="7" placeholder="Message"></textarea>
+                              <textarea name="body" class="form-control" id="body" cols="30" rows="7" placeholder="Message" ></textarea>
                           </div>
                       </div>
                       <div class="col-md-6">

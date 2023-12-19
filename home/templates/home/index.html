@@ -25,19 +25,24 @@
                     <div class="about-desc">
                         <div class="owl-carousel3">
                             <div class="item">
-                                <h2><span>Nhu Y</span></h2>
+                                <h2><span>Nhu Y Artistic</span></h2>
                             </div>
                             <div class="item">
-                                <h2><span>I'm</span><span>A Designer</span></h2>
+                                <h2><span>I'm</span><span>an Achitect</span></h2>
                             </div>
                         </div>
                         <div class="desc">
                             <div class="rotate">
                                 <h2 class="heading">About</h2>
                             </div>
-                            <p>
-                                "Architecture is not only the organization of space, but also the organization of emotions." – Zaha Hadid
-                            </p>
+                            {% for item in pA%}
+                           
+                                <p>
+                                    {{item.body|safe}}
+                                </p>
+                       
+                            
+                            {% endfor %}
 
                             <p class="colorlib-social-icons">
                                 <a href="https://www.facebook.com/NhuY.Artistic?mibextid=ZbWKwL"><i class="icon-facebook4"></i></a>
@@ -79,10 +84,12 @@
                                     <div class="services animate-box">
                                         <h3>1 - Design and Drawing Skills</h3>
                                         <ul>
+                                            <li>Interior Design</li>
                                             <li>Space Planning</li>
                                             <li>Concept Development</li>
                                             <li>Furniture Design</li>
                                             <li>Interior Detailing</li>
+                
                                         </ul>
                                     </div>
                                     <div class="services animate-box">
@@ -214,7 +221,8 @@
                                 </a>
                                 <div class="desc">
                                     <span class="meta">{{item2.created_at}}</span>
-                                    <h2><a href="{% url 'blog:single_blog' item2.id%}">{{item2.author}} Design</a></h2>
+                                    <h2><a href="{% url 'blog:single_blog' item2.id%}">{{item2.title}}</a></h2>
+                                    <h6><a href="{% url 'blog:single_blog' item2.id%}">{{item2.author}} Artistic</a></h6>
                                     <p>{{item2.summary}}</p>
                                 </div>
                             </div>
